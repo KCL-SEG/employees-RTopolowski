@@ -66,11 +66,11 @@ class Employee:
         self.commission = commission
 
     def get_pay(self):
-        return employment.getBasePay() + commission.getCommission()
+        return self.employment.getBasePay() + self.commission.getCommission()
 
     def __str__(self):
         temp_string = self.name+" works on a "
-        return self.name+" works on a "+str(employment)+str(commission)+".  Their total pay is "+str(self.get_pay())+"."
+        return self.name+" works on a "+str(self.employment)+str(self.commission)+".  Their total pay is "+str(self.get_pay())+"."
 
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
