@@ -4,10 +4,10 @@
 ## Employment classes (Employment is an interface class)
 class Employment:
     def getBasePay(self):
-        pass
+        return 0
 
     def __str__(self):
-        pass
+        return ""
         
 class MonthlySalary(Employment):
     def __init__(self, salary):
@@ -33,10 +33,10 @@ class HourlySalary(Employment):
 ## Commission classes (Commission is an interface class)
 class Commission:
     def getCommission(self):
-        pass
+        return 0
 
     def __str__(self):
-        pass
+        return ""
 
 class BonusCommission(Commission):
     def __init__(self, bonus):
@@ -66,7 +66,7 @@ class Employee:
         self.commission = commission
 
     def get_pay(self):
-        return self.employment.getBasePay() + self.commission.getCommission()
+        return int(self.employment.getBasePay()) + int(self.commission.getCommission())
 
     def __str__(self):
         temp_string = self.name+" works on a "
